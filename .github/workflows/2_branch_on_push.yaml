@@ -3,11 +3,12 @@ run-name: Running - ${{ github.event_name }}
 on: 
   push:
     branches:
+      - main
       - develop
-
+      - 'release/**'
 jobs:
   on-push:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Comentario
         run: |
